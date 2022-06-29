@@ -1,0 +1,6 @@
+input = (input("please input your set of numbers seperated by commas: "))
+input = input.replace(' ', '')
+list = input.split(',')
+tuple = tuple(list)
+print("list: " + str(list))
+print("tuple: " + str(tuple))
