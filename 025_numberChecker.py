@@ -10,5 +10,3 @@ if numberExists:
     print("your number exists in your list")
 else:
     print("your number does not exist in your list")
-
-# blah blah blah
