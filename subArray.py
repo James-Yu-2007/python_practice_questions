@@ -1,6 +1,3 @@
-from turtle import home
-
-
 input = input("please input your list of numbers seprated by commas: ")
 input = input.replace(' ', '')
 input = input.replace('[', '')
