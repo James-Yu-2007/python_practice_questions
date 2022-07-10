@@ -1,3 +1,6 @@
+from turtle import home
+
+
 input = input("please input your list of numbers seprated by commas: ")
 input = input.replace(' ', '')
 input = input.replace('[', '')
@@ -15,5 +18,4 @@ while endPoint < len(listInput):
             b = b+int(a)
         if b == 0:
             print(subList2)
-
         y = y+1
