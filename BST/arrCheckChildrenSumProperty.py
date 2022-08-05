@@ -35,9 +35,10 @@ for i in range(0, len(treeArr)):
 childrenSumValue = True
 for i in range(0, len(treeArr)):
     # print(i)
-    if (treeArr[i].left != -1) and (treeArr[i].right != -1):
+    if (treeArr[i].left != -1) or (treeArr[i].right != -1):
         if int(treeArr[treeArr[i].left].value) + int(treeArr[treeArr[i].right].value) != int(treeArr[i].value):
             childrenSumValue = False
+            break
 if childrenSumValue == True:
     print("your tree satisfies the children sum property")
 else:
