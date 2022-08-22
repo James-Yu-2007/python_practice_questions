@@ -3,13 +3,13 @@ class Node:
         self.data = data
         self.next = None
 
-class singly_linked_list:
+class linkedList:
     def __init__(self):
         self.tail = None
         self.head = None
         self.count = 0
 
-    def append_item(self, data):
+    def append(self, data):
         node = Node(data)
         if self.head:
             self.head.next = node
@@ -35,12 +35,12 @@ class singly_linked_list:
             current = current.next
         current.data = value
 
-items = singly_linked_list()
-items.append_item('1')
-items.append_item('2')
-items.append_item('3')
-items.append_item('4')
-items.append_item('5')
+items = linkedList()
+items.append('1')
+items.append('2')
+items.append('3')
+items.append('4')
+items.append('5')
 
 items[1] = "change 1"
 items[4] = "change 2"
