@@ -9,7 +9,7 @@ def bubbleSort(arr):
         if not swapped:
             return
 
-arr = [64, 34, 25, 12, 22, 11, 90]
+arr = [5,2,3,1,4]
  
 bubbleSort(arr)
  

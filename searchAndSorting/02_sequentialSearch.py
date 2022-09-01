@@ -1,10 +1,22 @@
-def search(list, object):
-    sequence = 0
-    for items in list:
-        if items == object:
-            return True, sequence
-        else:
-            sequence += 1
-    return False
+def binarySearch(arr, l, r, x):
+	if r >= l:
+		mid = l + (r - l) // 2
+		if arr[mid] == x:
+			return mid
+		elif arr[mid] > x:
+			return binarySearch(arr, l, mid-1, x)
+		else:
+			return binarySearch(arr, mid + 1, r, x)
+	else:
+		return -1
 
-print(search([1,2,3,4,5], 3))
+arr = [1,2,3,4,5]
+x = 3
+result = binarySearch(arr, 0, len(arr)-1, x)
+
+if result != -1:
+	print("True % d" % result)
+else:
+	print("False")
+
+# algerism above was learned from another source

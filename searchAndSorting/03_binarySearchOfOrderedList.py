@@ -1,8 +1,14 @@
-def search(list, object):
-    for items in list:
-        if items == object:
-            return True
-    return False
+def binary_search(list, item):
+    if not list:
+        return False
 
-print(search([1,2,3,4,5], 3))
-print(search([1,2,3,4,5], 6))
+    midpoint = len(list) // 2
+    if list[midpoint] == item:
+        return True
+
+    if item < list[midpoint]:
+        return binary_search(list[:midpoint], item)
+
+    return binary_search(list[midpoint + 1:], item)
+
+print(binary_search([1,2,3,4,5], 3))
