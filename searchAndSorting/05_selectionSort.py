@@ -1,17 +1,18 @@
-def selectionSort(array, size):
-    
-    for ind in range(size):
-        min_index = ind
- 
-        for j in range(ind + 1, size):
-            if array[j] < array[min_index]:
-                min_index = j
-        (array[ind], array[min_index]) = (array[min_index], array[ind])
- 
-arr = [5,2,3,1,4]
-size = len(arr)
-selectionSort(arr, size)
-print('The array after sorting in Ascending Order by selection sort is:')
-print(arr)
+list = [3,6,2,5,1,4]
 
-# algerism above was learned from another source
+def selectionSort(List):
+    list = []
+    for k in List:
+        list.append(k)
+    for i in range(len(list)):
+        n = -1
+        for j in list:
+            n += 1
+            if j == min(list):
+                index = n
+        List[i] = list[index]
+        list.remove(list[index])
+        
+    return List
+
+print(selectionSort(list))
