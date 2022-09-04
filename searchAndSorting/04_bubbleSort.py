@@ -1,20 +1,12 @@
-def bubbleSort(arr):
-    n = len(arr)
-    swapped = False
-    for i in range(n-1):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j + 1]:
-                swapped = True
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]         
-        if not swapped:
-            return
+def bubbleSort(list):
+    for n in range(len(list)-1):
+        for l in range(n):
+            if list[l]>list[l+1]:
+                temp = list[l]
+                list[l] = list[l+1]
+                list[l+1] = temp
+            print(list)
 
-arr = [5,2,3,1,4]
- 
-bubbleSort(arr)
- 
-print("Sorted array is:")
-for i in range(len(arr)):
-    print("% d" % arr[i], end=" ")
-
-# algerism above was learned from another source
+list = [3,6,2,5,1,4]
+bubbleSort(list)
+print(list)

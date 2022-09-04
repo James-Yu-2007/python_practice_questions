@@ -1,14 +1,15 @@
-def binary_search(list, item):
-    if not list:
-        return False
+def binerySearch(list, data):
+    first = 0
+    last = len(list) - 1
+    found = False
+    while first <= last and not found:
+        mid = (first + last) // 2
+        if data == list[mid]:
+            found = True
+        elif data > list[mid]:
+            first = mid + 1
+        else:
+            last = mid - 1
+    return found
 
-    midpoint = len(list) // 2
-    if list[midpoint] == item:
-        return True
-
-    if item < list[midpoint]:
-        return binary_search(list[:midpoint], item)
-
-    return binary_search(list[midpoint + 1:], item)
-
-print(binary_search([1,2,3,4,5], 3))
+print(binerySearch([1,2,3,4,5,6], 3))
